@@ -2,6 +2,7 @@
 import sys
 import pathlib
 
+######### STEP ONE #########
 def step_one(bag):
     """
     Returns the content of the elves' bag
@@ -20,6 +21,7 @@ def step_one(bag):
                 bag[elf_id] = calories
     return bag
 
+######### STEP TWO #########
 def step_two(bag):
     calories = 0
 
