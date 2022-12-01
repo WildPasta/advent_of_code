@@ -1,24 +1,39 @@
 # Imports
 import sys
+import pathlib
+
+def step_one(bag):
+    """
+    Returns the content of the elves' bag
+    """
+
+    calories = 0
+    elf_id = 1
+
+    with open("2022_challenges/day_1/input.txt","r") as file:
+        for line in file:
+            if line.strip() == "":
+                elf_id += 1
+                calories = 0
+            else:
+                calories += int(line.strip())
+                bag[elf_id] = calories
+    return bag
+
+def step_two(bag):
+    calories = 0
+
+    values = sorted(bag, key = (bag.get), reverse = True)[:3]
+    for i in range(len(values)):
+        calories += bag[values[i]]
+    return calories
 
 def main():
-    #print(step_one())
-    #print(step_two())
-    pass
+    bag = dict()
+    bag = step_one(bag)
+    print("Most calories carried by an elf:", max(bag.values()))
 
-######### STEP ONE #########
-def step_one():
-    with open('input.txt','r') as file:
-        for line in file:
-            pass
-    return 0
+    print("The 3 biggest bags contains", step_two(bag), "calories in total")
 
-######### STEP TWO #########
-def step_two():
-    with open('input.txt','r') as file:
-        for line in file:
-            pass
-    return 0
-    
 if __name__ == "__main__":
     sys.exit(main())
