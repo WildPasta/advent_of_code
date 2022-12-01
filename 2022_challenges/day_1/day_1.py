@@ -23,6 +23,10 @@ def step_one(bag):
 
 ######### STEP TWO #########
 def step_two(bag):
+    """
+    Returns the total calories of the top 3 bags
+    """
+
     calories = 0
 
     values = sorted(bag, key = (bag.get), reverse = True)[:3]
