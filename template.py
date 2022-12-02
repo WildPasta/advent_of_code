@@ -3,14 +3,14 @@ import sys
 
 ######### STEP ONE #########
 def step_one():
-    with open('input.txt','r') as file:
+    with open('2022_challenges/day_2/input.txt','r') as file:
         for line in file:
             pass
     return 0
 
 ######### STEP TWO #########
 def step_two():
-    with open('input.txt','r') as file:
+    with open('2022_challenges/day_2/input.txt','r') as file:
         for line in file:
             pass
     return 0
