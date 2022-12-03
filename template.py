@@ -16,8 +16,8 @@ def step_two():
     return 0
 
 def main():
-    #print(step_one())
-    #print(step_two())
+    #print("Result of Part One:", step_one())
+    #print("Result of Part Two:", step_two())
     pass
 
 if __name__ == "__main__":
