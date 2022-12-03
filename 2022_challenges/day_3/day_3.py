@@ -11,8 +11,8 @@ def get_priority(letter):
     # Offset to 1 so 'a' returns 1 and not 0
     offset = 1
     if letter.isupper():
-        return ord(letter) - 38
-    return ord(letter) - 97 + offset
+        return ord(letter) - ord('A') + 26 + offset 
+    return ord(letter) - ord('a') + offset
 
 ######### STEP ONE #########
 def step_one():
