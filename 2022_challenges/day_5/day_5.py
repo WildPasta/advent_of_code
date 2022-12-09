@@ -1,5 +1,4 @@
 # Imports
-import re
 import sys
 
 def revert_crates(crates):
@@ -61,17 +60,15 @@ def read_move(size, crates, func):
     Calling move function according to the step
     """
 
-    regex = "(\d+)"
     res = ""
 
     with open('2022_challenges/day_5/input.txt','r') as file:
         for _ in range(size+1):
             file, next(file)
         for line in file:
-            regex_res = re.findall(regex, line.strip())
-            move_ = int(regex_res[0])
-            from_ = int(regex_res[1])
-            to_ = int(regex_res[2])
+            move_ = int(line.strip().split(" ")[1])
+            from_ = int(line.strip().split(" ")[3])
+            to_ = int(line.strip().split(" ")[5])
             crates = func(move_, from_, to_, crates)
 
     for i in range(len(crates)):
