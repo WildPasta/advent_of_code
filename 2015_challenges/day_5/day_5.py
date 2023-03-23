@@ -4,7 +4,7 @@ import time
 
 #########STEP ONE#########
 def step_one() -> int:
-    with open('day_5/input.txt','r') as file:
+    with open('2015_challenges/day_5/input.txt','r') as file:
         count_isok = 0
         for line in file:
             if vowel_count(line.strip()) and twin(line.strip()) > 0 and forbidden(line.strip()):
@@ -46,7 +46,7 @@ def forbidden(string):
 
 #########STEP TWO#########
 def step_two() -> int:
-    with open('day_5/input.txt','r') as file:
+    with open('2015_challenges/day_5/input.txt','r') as file:
         count_isok = 0
         for line in file:
             if twin_two(line) and lettercheck(line):
