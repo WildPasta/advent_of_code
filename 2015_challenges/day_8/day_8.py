@@ -1,5 +1,4 @@
 # Imports
-import re
 import sys
 import time
 
@@ -16,7 +15,7 @@ def step_one() -> int:
 
 ######### STEP TWO #########
 def step_two() -> int:
-    code_length = 0
+    code_length = 0 
     encoded_length = 0
     with open('2015_challenges/day_8/input.txt') as f:
         for line in f:
